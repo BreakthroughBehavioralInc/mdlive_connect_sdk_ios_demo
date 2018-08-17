@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DemoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pBz-ib-fYS">
+                                <rect key="frame" x="60" y="73" width="203" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="203" id="RqH-Ya-qel"/>
+                                    <constraint firstAttribute="height" constant="30" id="m1C-Ok-L5m"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Appointment ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r6z-Z7-JdH">
+                                <rect key="frame" x="60" y="163" width="203" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="2NG-YJ-bfa"/>
+                                    <constraint firstAttribute="width" constant="203" id="3FF-Gl-ubD"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1lu-wT-E4m">
+                                <rect key="frame" x="60" y="119" width="203" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="203" id="0nn-fc-mRO"/>
+                                    <constraint firstAttribute="height" constant="30" id="Kq8-4o-I2I"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nGq-el-PR1">
+                                <rect key="frame" x="136.5" y="211" width="102" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="G2L-xC-FuZ"/>
+                                    <constraint firstAttribute="width" constant="102" id="pJu-Zh-dWv"/>
+                                </constraints>
+                                <state key="normal" title="Test Video">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="testVideoButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fC8-KI-Kck"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.25935962800000001" green="0.60707116130000005" blue="0.86062890290000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="nGq-el-PR1" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="07n-xU-lBK"/>
+                            <constraint firstItem="1lu-wT-E4m" firstAttribute="top" secondItem="pBz-ib-fYS" secondAttribute="bottom" constant="16" id="4h1-Bc-5zx"/>
+                            <constraint firstItem="nGq-el-PR1" firstAttribute="top" secondItem="r6z-Z7-JdH" secondAttribute="bottom" constant="18" id="7q2-sq-jW4"/>
+                            <constraint firstItem="pBz-ib-fYS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="53" id="H4S-zM-m4e"/>
+                            <constraint firstItem="1lu-wT-E4m" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="WjK-TC-mD5"/>
+                            <constraint firstItem="r6z-Z7-JdH" firstAttribute="top" secondItem="1lu-wT-E4m" secondAttribute="bottom" constant="14" id="cNk-eK-eCI"/>
+                            <constraint firstItem="r6z-Z7-JdH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="h1n-gi-gM9"/>
+                            <constraint firstItem="pBz-ib-fYS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="o9g-0Q-ty4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="appointmentIDTextField" destination="r6z-Z7-JdH" id="r5Q-Yv-ege"/>
+                        <outlet property="passwordTextField" destination="1lu-wT-E4m" id="BHf-Dd-Utx"/>
+                        <outlet property="usernameTextField" destination="pBz-ib-fYS" id="usY-a9-UfX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>

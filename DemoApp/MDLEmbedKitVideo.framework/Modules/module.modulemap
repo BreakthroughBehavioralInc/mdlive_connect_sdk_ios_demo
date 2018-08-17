@@ -1,0 +1,6 @@
+framework module MDLEmbedKitVideo {
+  umbrella header "MDLEmbedKitVideo.h"
+
+  export *
+  module * { export * }
+}
