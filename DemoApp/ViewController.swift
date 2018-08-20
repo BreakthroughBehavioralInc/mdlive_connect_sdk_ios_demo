@@ -41,16 +41,16 @@ class ViewController: UIViewController {
         let session: URLSession = .init(configuration: sessionConfiguration)
         let task = session.dataTask(with: request) { [weak self] data, response, error in
             guard let data = data, error == nil else {
-               return
+                return
             }
             
             guard let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String : Any],
                 let token = json?["jwt"] as? String,
-            let user = json?["user"] as? [String: Any],
-                let userID = user["id"] as? String else {
-                return
+                let user = json?["user"] as? [String: Any],
+                let userID = user["id"] as? Int else {
+                    return
             }
-            self?.startVideoAppointment(userID: userID, appointmentID: appointmentID, auth: token)
+           self?.startVideoAppointment(userID: String(userID), appointmentID: appointmentID, auth: token)
         }
         task.resume()
     }
@@ -58,6 +58,7 @@ class ViewController: UIViewController {
     
     func startVideoAppointment(userID: String, appointmentID: String, auth: String) {
         MDLEmbedKitVideoCore.sharedInstance().setAuthorizationToken(auth, userID: userID)
+        // This delay is only needed for the demo app. In production, there is a series of UI appointment scheduling screens before the patient is taken to the video session screen.
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 5) {
             MDLEmbedKitVideoCore.sharedInstance().startVideoSession(withAppointmentID: appointmentID
                 , onConnect: { [weak self] vc, _ in
