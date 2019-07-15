@@ -27,5 +27,6 @@ typedef void (^MDLEmbedKitVideoOnDisconnect)(UIViewController*  _Nullable viewCo
                                 onConnect:(MDLEmbedKitVideoOnConnect _Nullable)connectBlock
                                 onDisconnect:(MDLEmbedKitVideoOnDisconnect _Nullable)disconnectBlock;
 
+-(void)fetchUserSettings;
 
 @end
