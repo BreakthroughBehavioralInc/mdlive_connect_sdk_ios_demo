@@ -20,10 +20,9 @@ typedef void (^MDLEmbedKitVideoOnDisconnect)(UIViewController*  _Nullable viewCo
 + (instancetype _Nullable) new UNAVAILABLE_ATTRIBUTE;
 
 
--(void)setAuthorizationToken:(NSString* _Nonnull)authToken
-                      userID:(NSString* _Nonnull)userID;
-
 -(void)startVideoSessionWithAppointmentID:(NSString* _Nonnull)appointmentID
+                                userID:(NSString* _Nonnull)userID
+                                authToken:(NSString* _Nonnull)authToken
                                 onConnect:(MDLEmbedKitVideoOnConnect _Nullable)connectBlock
                                 onDisconnect:(MDLEmbedKitVideoOnDisconnect _Nullable)disconnectBlock;
 
